@@ -10,8 +10,50 @@
 
 ---
 
-## Interactive Embed
+## Interactive Embed & Thumbnail View
 
+### 1. Animated Video Thumbnail (Recommended for Portfolio Cards)
+Autoplays a smooth loop of the 240-frame sequence being scrubbed through:
+
+```html
+<!-- Responsive Autoplaying Scroll Thumbnail -->
+<div style="position: relative; width: 100%; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; background: #000;">
+  <video
+    src="https://threshold-sanctuaries.vercel.app/thumbnail-scroll.mp4"
+    poster="https://threshold-sanctuaries.vercel.app/frames/frame_001.jpg"
+    autoplay
+    loop
+    muted
+    playsinline
+    style="width: 100%; height: 100%; object-fit: cover; display: block;"
+  ></video>
+</div>
+```
+
+* **Local Mac Files:**
+  - MP4 Video (720p 40fps): `/Users/caleblickteig/Documents/surreal site proof of concept/public/thumbnail-scroll.mp4`
+  - WebM Video (VP9 1.1MB): `/Users/caleblickteig/Documents/surreal site proof of concept/public/thumbnail-scroll.webm`
+  - Animated GIF (640x360): `/Users/caleblickteig/Documents/surreal site proof of concept/public/thumbnail-scroll.gif`
+* **Live URLs:**
+  - `https://threshold-sanctuaries.vercel.app/thumbnail-scroll.mp4`
+  - `https://threshold-sanctuaries.vercel.app/thumbnail-scroll.webm`
+  - `https://threshold-sanctuaries.vercel.app/thumbnail-scroll.gif`
+
+---
+
+### 2. Animated GIF Thumbnail (Universal Fallback)
+```html
+<img
+  src="https://threshold-sanctuaries.vercel.app/thumbnail-scroll.gif"
+  alt="THRESHOLD™ Scroll Scrub Preview"
+  style="width: 100%; aspect-ratio: 16/9; border-radius: 12px; object-fit: cover;"
+  loading="lazy"
+/>
+```
+
+---
+
+### 3. Full Interactive Iframe Embed
 Embed this responsive iframe directly on your portfolio or showcase site:
 
 ```html
